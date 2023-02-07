@@ -87,6 +87,7 @@ import { BusinessesMap } from './components/BusinessesMap'
 import { MapView } from './components/MapView'
 import { ConfigContext, ConfigProvider, useConfig } from './contexts/ConfigContext'
 import { SiteContext, SiteProvider, useSite } from './contexts/SiteContext'
+import { CityContext, CityProvider, useCity } from './contexts/CityContext'
 import { LanguageContext, LanguageProvider, useLanguage } from './contexts/LanguageContext'
 import { OrderContext, OrderProvider, useOrder } from './contexts/OrderContext'
 import { BusinessContext, BusinessProvider, useBusiness } from './contexts/BusinessContext'
@@ -291,6 +292,9 @@ export {
   SiteContext,
   SiteProvider,
   useSite,
+  CityContext, 
+  CityProvider, 
+  useCity, 
   LanguageContext,
   LanguageProvider,
   useLanguage,

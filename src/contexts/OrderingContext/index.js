@@ -1,6 +1,5 @@
 import React, { createContext } from 'react'
 import { ConfigProvider } from '../ConfigContext'
-import { SiteProvider } from '../SiteContext'
 import { SessionProvider } from '../SessionContext'
 import { WebsocketProvider } from '../WebsocketContext'
 import { OrderProvider } from '../OrderContext'
@@ -15,6 +14,7 @@ import { ToastProvider } from '../ToastContext'
 import { WebStrategy } from '../../webStrategy'
 import { OrderingThemeProvider } from '../OrderingThemeContext'
 import { OptimizationLoadProvider } from '../OptimizationLoadContext'
+import { CityProvider } from '../CityContext';
 
 /**
  * Create OrderingContext
@@ -43,7 +43,7 @@ export const OrderingProvider = ({ Alert, settings, isAlsea, children }) => {
             <LanguageProvider strategy={webStrategy}>
               <ConfigProvider strategy={webStrategy}>
                 <OrderingThemeProvider settings={Object.assign(settings.api, restOfSettings)}>
-                  <SiteProvider appId={settings.app_id}>
+                  <CityProvider>
                     <UtilsProviders>
                       <ToastProvider>
                         <ValidationFieldsProvider>
@@ -70,7 +70,7 @@ export const OrderingProvider = ({ Alert, settings, isAlsea, children }) => {
                         </ValidationFieldsProvider>
                       </ToastProvider>
                     </UtilsProviders>
-                  </SiteProvider>
+                  </CityProvider>
                 </OrderingThemeProvider>
               </ConfigProvider>
             </LanguageProvider>
